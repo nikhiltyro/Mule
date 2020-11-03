@@ -16,6 +16,8 @@ http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/fil
 	<flow name="testFlow" doc:id="62fa1fcb-13e7-4b02-a5ac-076f669718a3" >
 		<http:listener doc:name="Listener" doc:id="3a0ca858-bebe-4dc4-aa84-392641bba349" config-ref="HTTP_Listener_config" path="test"/>
 		<set-payload value="[a,b,c,d,e]" doc:name="Set Payload" doc:id="4685c9b5-11f1-464a-980a-75b1ca66ba62" />
+		
+		
 		<batch:job jobName="testBatch_Job" doc:id="6fd640f2-3480-4814-8700-40214377cc68" >
 			<batch:process-records >
 				<batch:step name="Batch_Step" doc:id="fcd1adde-fae7-46ba-95ee-4cb7292578a8">
